@@ -127,3 +127,66 @@ img {
 /************************************************
     SOLUZIONE RESPONSIVE
  ************************************************/
+
+ /***********************
+ best options for this particular layout IMHO:
+
+    Smartphone Breakpoint: 770px;
+    Tablet Breakpoint: 990px;
+    Desktop Breakpoint: >990px
+
+  ***********************/
+
+ /* solutions for given Breakpoint::after
+    Tablet: 768px
+    Mobile: 480px
+    Desktop: above 768px
+    (bonus range 768px < x < 1160px
+ 
+ */
+@media screen and (min-width: 480px) and (max-width: 1160px){
+    /* without modifying CSS above */
+    .container{
+        width: auto;
+        max-width: 1140px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .container{
+        width: auto;
+        max-width: 1140px;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .lessons .col, .steps .col, .why-us .col{
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+    .lessons .col :last-child{
+        margin-bottom: 0;
+    }
+    h2, h3{
+        font-size: 1.9rem;
+    }
+    h3 {
+        margin-top: 1rem;
+    }
+    .lessons p, .steps p, .why-us p{
+        font-size: 1.1rem;
+        margin: 1rem;
+    }
+    .steps, .why-us  {
+        margin: 0;
+    }
+    .steps .col :last-child{
+        margin-bottom: 0;
+    }
+    .why-us  {
+       padding-top: 3rem;
+    }
+    .why-us h2{
+        font-size: 2.5rem;
+    }
+}
